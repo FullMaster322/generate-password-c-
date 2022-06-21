@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "I welcome you to the program for generating strong passwords. Attention: when creating a password, do not forget the word you entered, and it is also worth remembering the numbers you entered after you wrote the word in case you forgot the password" << endl; 
+    string a;
+    cin >> a;
+    int b = a.length();
+    double wr;
+    cin >> wr;
+    int pl;
+    cin >> pl;
+    int mi;
+    cin >> mi;
+    double del;
+    cin >> del;
+    
+
+    
+    if(b >= 4)
+    {
+      
+    
+    for(int i = 0; i <= b; i++)
+    {
+        if(i % 2 != 0)
+        {
+            cout << a[i] / del;
+            cout << b - mi;
+            cout << i + pl;
+            
+        } else {
+            cout << a[i] / del;
+            cout << b + pl;
+            cout << i - mi;
+        }
+         char h = a[i];
+         int d = h + wr;
+         if(d > 122)
+        {
+           d = d - 26;
+        }
+        char e = static_cast<char>(d);
+        cout << e;
+        }
+    } else {
+        cout << "your word is short, come up with a better word (min 4 word)" << endl;
+    }
+}
